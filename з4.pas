@@ -1,8 +1,8 @@
-﻿program z4;
+program z4;
 var year,minYear, maxYear, i: integer;
   kolvoos, // количество осадков для нынешного года
   minos,     // минимальное колво осадков 
-  maxos: real; // Максимальное колво осадков 
+  maxos: real; // максимальное колво осадков 
 begin
   writeln('Введите количество осадков в мм:');
 
@@ -11,8 +11,8 @@ begin
   
   minos := kolvoos; 
   maxos := kolvoos; 
-  minYear := 2011;  
-  maxYear := 2011;  
+  minYear := 2015;  
+  maxYear := 2015;  
 
   for i := 1 to 10 do
   begin
@@ -30,13 +30,12 @@ begin
     if kolvoos > maxos then
     begin
       maxos:= kolvoos; // обновляю значение максимума
-      minYear := year;
+      maxYear := year;
     end;
   end;
   
   writeln;
 
   writeln('самый засушливый год: ', minYear, ' (', minos:0:1, ' мм)');
-  // Вывод самого влажного года
   writeln('самый влажный год: ', maxYear, ' (', maxos:0:1, ' мм)');
 end.
