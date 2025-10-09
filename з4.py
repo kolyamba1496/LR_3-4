@@ -5,8 +5,8 @@ kolvoos = float(input())
 
 minos = kolvoos
 maxos = kolvoos
-minYear = 2011
-maxYear = 2011
+minYear = 2015
+maxYear = 2015
 
 for i in range(1, 11):
     year = 2015 + i
@@ -20,9 +20,7 @@ for i in range(1, 11):
 
     if kolvoos > maxos:
         maxos = kolvoos
-        minYear = year
-
-print()
+        maxYear = year
 
 print('самый засушливый год: ', minYear, ' (', format(minos, '.1f'), ' мм)')
 print('самый влажный год: ', maxYear, ' (', format(maxos, '.1f'), ' мм)')
